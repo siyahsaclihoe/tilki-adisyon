@@ -1,0 +1,16 @@
+{
+  "name": "tilki-adisyon",
+  "version": "3.0.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "author": "doga.dev & ensxr.dev",
+  "description": "TilkiAdisyon - Yeni Nesil Restoran & Kafe Adisyon ve POS Otomasyonu (Full-Stack)",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "setup": "node server/setup-wizard.mjs",
+    "seed": "node server/seed.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  }
+}

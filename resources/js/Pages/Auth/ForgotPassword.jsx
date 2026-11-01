@@ -1,0 +1,6 @@
+/**
+ * Reconstructed source from TilkiAdisyon production bundle
+ * Original entry: resources/js/Pages/Auth/ForgotPassword.jsx
+ * Bundle chunk: assets/ForgotPassword-C-keYNmp.js
+ */
+import{u as n,j as e,H as d}from"./app-tgt1EkC5.js";import{T as u,I as c}from"./TextInput-DBk6qVH-.js";import{G as x,P as p}from"./GuestLayout-Dkbr1bDK.js";function g({status:a}){const{data:t,setData:o,post:r,processing:l,errors:m}=n({email:""}),i=s=>{s.preventDefault(),r(route("password.email"))};return e.jsxs(x,{children:[e.jsx(d,{title:"Forgot Password"}),e.jsx("div",{className:"mb-4 text-sm text-gray-600",children:"Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one."}),a&&e.jsx("div",{className:"mb-4 text-sm font-medium text-green-600",children:a}),e.jsxs("form",{onSubmit:i,children:[e.jsx(u,{id:"email",type:"email",name:"email",value:t.email,className:"mt-1 block w-full",isFocused:!0,onChange:s=>o("email",s.target.value)}),e.jsx(c,{message:m.email,className:"mt-2"}),e.jsx("div",{className:"mt-4 flex items-center justify-end",children:e.jsx(p,{className:"ms-4",disabled:l,children:"Email Password Reset Link"})})]})]})}export{g as default};

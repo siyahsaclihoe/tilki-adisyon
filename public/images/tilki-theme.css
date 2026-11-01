@@ -1,0 +1,534 @@
+/* ==========================================================================
+   TilkiAdisyon — Complete Dual Theme (Light & Dark) + Winter Edition + Utilities
+   ========================================================================== */
+
+:root {
+  --tilki-violet: #7c3aed;
+  --tilki-violet-light: #a78bfa;
+  --tilki-pink: #ec4899;
+  --tilki-blue: #3b82f6;
+  --tilki-cyan: #06b6d4;
+  --tilki-gold: #f59e0b;
+}
+
+/* ==========================================================================
+   1. DARK MODE (html.dark) — Cosmic Royal Violet & Winter Night
+   ========================================================================== */
+html.dark body {
+  background-color: #06060f !important;
+  background-image:
+    radial-gradient(ellipse at 20% 15%, rgba(124, 58, 237, 0.16) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 85%, rgba(59, 130, 246, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.07) 0%, transparent 40%),
+    linear-gradient(rgba(124, 58, 237, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.025) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px !important;
+  background-attachment: fixed !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark header.tilki-top-header {
+  background: rgba(10, 9, 24, 0.82) !important;
+  backdrop-filter: blur(22px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(170%) !important;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.22) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Global Dark Mode surface overrides so no card or sub-box ever turns white in Dark Mode */
+html.dark .bg-white,
+html.dark .dark\:bg-dark-card,
+html.dark .card,
+html.dark .card-hover,
+html.dark .modal-content {
+  background-color: rgba(15, 14, 30, 0.86) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-color: rgba(124, 58, 237, 0.24) !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark .bg-surface-50,
+html.dark .bg-surface-100,
+html.dark .dark\:bg-dark-elevated {
+  background-color: rgba(24, 22, 46, 0.82) !important;
+  border-color: rgba(124, 58, 237, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark .bg-surface-200,
+html.dark .bg-surface-200\/70 {
+  background-color: rgba(38, 35, 68, 0.75) !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea {
+  background-color: rgba(18, 16, 36, 0.9) !important;
+  border-color: rgba(124, 58, 237, 0.28) !important;
+  color: #f8fafc !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: rgba(148, 163, 184, 0.6) !important;
+}
+
+html.dark table thead,
+html.dark table thead tr {
+  background-color: rgba(22, 20, 44, 0.9) !important;
+  color: #c4b5fd !important;
+}
+
+html.dark table tbody tr {
+  border-color: rgba(124, 58, 237, 0.14) !important;
+}
+
+html.dark table tbody tr:hover {
+  background-color: rgba(124, 58, 237, 0.1) !important;
+}
+
+/* ==========================================================================
+   2. LIGHT MODE (html:not(.dark)) — Crisp Winter Pearl & Frosted Glass
+   ========================================================================== */
+html:not(.dark) body {
+  background-color: #f3f5fb !important;
+  background-image:
+    radial-gradient(ellipse at 15% 10%, rgba(124, 58, 237, 0.09) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 90%, rgba(59, 130, 246, 0.09) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 40%, rgba(236, 72, 153, 0.05) 0%, transparent 40%),
+    linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px !important;
+  background-attachment: fixed !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) header.tilki-top-header {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(22px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(170%) !important;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.15) !important;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05) !important;
+}
+
+html:not(.dark) .bg-white,
+html:not(.dark) .card {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(14px) !important;
+  border-color: rgba(124, 58, 237, 0.16) !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05) !important;
+}
+
+html:not(.dark) .bg-surface-50 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) .bg-surface-100 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) input:not([type="checkbox"]):not([type="radio"]),
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* ==========================================================================
+   3. SWEET BLUR PAGE TRANSITIONS (Sayfa Geçiş Blur Efektleri)
+   ========================================================================== */
+@keyframes tilkiBlurPageIn {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(14px) scale(0.985);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tilki-page-transition {
+  animation: tilkiBlurPageIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes tilkiMotionVeil {
+  0% { opacity: 0; backdrop-filter: blur(0px); }
+  35% { opacity: 1; backdrop-filter: blur(12px) saturate(140%); }
+  100% { opacity: 0; backdrop-filter: blur(0px); }
+}
+
+.tilki-blur-veil-active {
+  animation: tilkiMotionVeil 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ==========================================================================
+   4. FLOATING COLLAPSIBLE BOTTOM DOCK NAVBAR & POPOVER DRAWER
+   ========================================================================== */
+.tilki-bottom-dock-wrap {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  max-width: 96vw;
+  transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tilki-bottom-dock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 26px;
+  backdrop-filter: blur(26px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.dark .tilki-bottom-dock {
+  background: rgba(12, 11, 26, 0.88) !important;
+  border: 1px solid rgba(167, 139, 250, 0.32) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(124, 58, 237, 0.25) !important;
+}
+
+html:not(.dark) .tilki-bottom-dock {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(124, 58, 237, 0.24) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14), 0 0 25px rgba(124, 58, 237, 0.12) !important;
+}
+
+.tilki-dock-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tilki-dock-link:hover {
+  transform: translateY(-3px);
+}
+
+html.dark .tilki-dock-link-inactive {
+  color: #e2e8f0 !important;
+}
+html.dark .tilki-dock-link-inactive:hover {
+  background: rgba(124, 58, 237, 0.2) !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) .tilki-dock-link-inactive {
+  color: #334155 !important;
+}
+html:not(.dark) .tilki-dock-link-inactive:hover {
+  background: rgba(124, 58, 237, 0.1) !important;
+  color: #6d28d9 !important;
+}
+
+.tilki-dock-link-active {
+  background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.4) !important;
+}
+
+@keyframes tilkiPopoverIn {
+  0% { opacity: 0; filter: blur(12px); transform: translate(-50%, 16px) scale(0.95); }
+  100% { opacity: 1; filter: blur(0px); transform: translate(-50%, 0) scale(1); }
+}
+
+.tilki-dock-popover {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 680px);
+  padding: 20px;
+  border-radius: 28px;
+  z-index: 95;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  animation: tilkiPopoverIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+html.dark .tilki-dock-popover {
+  background: rgba(13, 12, 28, 0.94) !important;
+  border: 1px solid rgba(167, 139, 250, 0.35) !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.78), 0 0 40px rgba(124, 58, 237, 0.28) !important;
+}
+
+html:not(.dark) .tilki-dock-popover {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(124, 58, 237, 0.24) !important;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18), 0 0 35px rgba(124, 58, 237, 0.12) !important;
+}
+
+/* Management Popover Cards — Explicit Dual-Theme Styling */
+.tilki-popover-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+html.dark .tilki-popover-item {
+  background: rgba(26, 24, 50, 0.85) !important;
+  border: 1px solid rgba(139, 92, 246, 0.24) !important;
+  color: #f8fafc !important;
+}
+html.dark .tilki-popover-item:hover {
+  background: rgba(124, 58, 237, 0.24) !important;
+  border-color: rgba(236, 72, 153, 0.45) !important;
+  transform: translateY(-2px);
+}
+html.dark .tilki-popover-item-title { color: #ffffff !important; font-weight: 700; font-size: 0.82rem; }
+html.dark .tilki-popover-item-desc { color: #a1a1aa !important; font-size: 0.7rem; }
+
+html:not(.dark) .tilki-popover-item {
+  background: #f8fafc !important;
+  border: 1px solid rgba(124, 58, 237, 0.16) !important;
+  color: #0f172a !important;
+}
+html:not(.dark) .tilki-popover-item:hover {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border-color: rgba(124, 58, 237, 0.35) !important;
+  transform: translateY(-2px);
+}
+html:not(.dark) .tilki-popover-item-title { color: #0f172a !important; font-weight: 700; font-size: 0.82rem; }
+html:not(.dark) .tilki-popover-item-desc { color: #64748b !important; font-size: 0.7rem; }
+
+.tilki-popover-item-active {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.32), rgba(236, 72, 153, 0.25)) !important;
+  border-color: #a855f7 !important;
+}
+
+/* ==========================================================================
+   5. COMPLETE UTILITY DEFINITIONS FOR ALL DYNAMIC CLASSES
+   ========================================================================== */
+.max-w-\[1600px\] { max-width: 1600px; }
+.max-w-\[95vw\] { max-width: 95vw; }
+.max-h-\[60vh\] { max-height: 60vh; }
+.z-80 { z-index: 80; }
+.backdrop-blur-\[2px\] { backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+.gap-1\.5 { gap: 0.375rem; }
+.gap-2\.5 { gap: 0.625rem; }
+.gap-3\.5 { gap: 0.875rem; }
+.p-1\.5 { padding: 0.375rem; }
+.pl-2 { padding-left: 0.5rem; }
+.pt-1\.5 { padding-top: 0.375rem; }
+.mt-1\.5 { margin-top: 0.375rem; }
+.mt-2\.5 { margin-top: 0.625rem; }
+.mx-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.-top-1\.5 { top: -0.375rem; }
+.-left-1\.5 { left: -0.375rem; }
+.-rotate-90 { transform: rotate(-90deg); }
+.font-extrabold { font-weight: 800; }
+.self-start { align-self: flex-start; }
+.drop-shadow-xl { filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25)); }
+
+.shadow-purple-500\/30, .shadow-purple-500\/40, .shadow-purple-500\/50 {
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.32);
+}
+.shadow-pink-500\/30, .shadow-pink-500\/50 {
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.32);
+}
+.shadow-emerald-500\/50 {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+}
+.shadow-amber-500\/30 {
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+.hover\:bg-purple-200:hover { background-color: #e9d5ff; }
+.hover\:bg-purple-500:hover { background-color: #a855f7 !important; color: #fff !important; }
+.hover\:bg-emerald-200:hover { background-color: #a7f3d0; }
+.hover\:bg-red-500\/10:hover { background-color: rgba(239, 68, 68, 0.12); }
+.hover\:border-pink-500:hover { border-color: #ec4899 !important; }
+.hover\:border-emerald-500:hover { border-color: #10b981 !important; }
+.hover\:border-purple-500\/40:hover { border-color: rgba(168, 85, 247, 0.45) !important; }
+.group:hover .group-hover\:text-purple-600 { color: #9333ea; }
+
+/* Fix missing primary-* classes in Reports/Weekly, Cancellations, Logs, User */
+.text-primary-500, html.dark .dark\:text-primary-400 { color: #a855f7 !important; }
+.bg-primary-100 { background-color: rgba(168, 85, 247, 0.15) !important; }
+html.dark .dark\:bg-primary-700 { background-color: rgba(124, 58, 237, 0.28) !important; }
+.bg-primary-500, html.dark .dark\:bg-primary-400 { background-color: #8b5cf6 !important; }
+.w-px { width: 1px; }
+.w-3\.5 { width: 0.875rem; }
+.h-3\.5 { height: 0.875rem; }
+.w-28 { width: 7rem; }
+.h-28 { height: 7rem; }
+.w-36 { width: 9rem; }
+.h-36 { height: 9rem; }
+.text-\[11px\] { font-size: 11px; line-height: 1.35; }
+.text-\[10px\] { font-size: 10px; line-height: 1.3; }
+.ring-4 { box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.35); }
+.ring-purple-500\/50, .ring-purple-500\/40, .ring-purple-500\/30, .ring-purple-400\/50, .ring-purple-400\/40 {
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.45);
+}
+.ring-pink-500\/50, .ring-pink-500\/40 { box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.45); }
+.ring-emerald-500\/40 { box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.45); }
+.ring-amber-500\/40, .ring-amber-500\/50 { box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.45); }
+.ring-cyan-500\/40 { box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.45); }
+.ring-white\/20 { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22); }
+
+.bg-black\/30 { background-color: rgba(0, 0, 0, 0.35); }
+.bg-emerald-500\/95 { background-color: rgba(16, 185, 129, 0.95); }
+.bg-red-500\/95 { background-color: rgba(239, 68, 68, 0.95); }
+.bg-pink-50 { background-color: #fdf2f8; }
+.bg-pink-100 { background-color: #fce7f3; }
+.bg-amber-50\/70 { background-color: rgba(255, 251, 235, 0.75); }
+
+html.dark .bg-pink-50,
+html.dark .dark\:bg-pink-500\/10 { background-color: rgba(236, 72, 153, 0.12) !important; }
+html.dark .bg-purple-50,
+html.dark .dark\:bg-purple-500\/10 { background-color: rgba(168, 85, 247, 0.12) !important; }
+html.dark .bg-emerald-50,
+html.dark .dark\:bg-emerald-500\/10 { background-color: rgba(16, 185, 129, 0.12) !important; }
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/70,
+html.dark .dark\:bg-amber-500\/10 { background-color: rgba(245, 158, 11, 0.12) !important; }
+
+html.dark .dark\:bg-purple-500\/15,
+html.dark .dark\:bg-purple-500\/20,
+html.dark .dark\:bg-purple-500\/25 { background-color: rgba(168, 85, 247, 0.2) !important; }
+html.dark .dark\:bg-pink-500\/15,
+html.dark .dark\:bg-pink-500\/25 { background-color: rgba(236, 72, 153, 0.2) !important; }
+html.dark .dark\:bg-emerald-500\/15 { background-color: rgba(16, 185, 129, 0.18) !important; }
+html.dark .dark\:bg-white\/5 { background-color: rgba(255, 255, 255, 0.05) !important; }
+html.dark .dark\:bg-white\/10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+html.dark .dark\:bg-white\/15 { background-color: rgba(255, 255, 255, 0.15) !important; }
+html.dark .dark\:bg-black\/25 { background-color: rgba(10, 9, 22, 0.65) !important; }
+html.dark .dark\:bg-zinc-800 { background-color: #27272a !important; }
+
+html.dark .dark\:hover\:bg-purple-500\/25:hover { background-color: rgba(168, 85, 247, 0.28) !important; }
+html.dark .dark\:hover\:bg-emerald-500\/25:hover,
+html.dark .dark\:hover\:bg-emerald-500\/30:hover { background-color: rgba(16, 185, 129, 0.28) !important; }
+html.dark .dark\:hover\:bg-white\/10:hover { background-color: rgba(255, 255, 255, 0.12) !important; }
+
+.border-purple-500\/25, .border-purple-500\/50, .dark\:border-purple-500\/25, .dark\:border-purple-500\/30, .dark\:border-purple-500\/35, .dark\:border-purple-400\/40 {
+  border-color: rgba(168, 85, 247, 0.32) !important;
+}
+.border-pink-200, .border-pink-300, .dark\:border-pink-500\/25, .dark\:border-pink-500\/30, .dark\:border-pink-400\/40 {
+  border-color: rgba(236, 72, 153, 0.3) !important;
+}
+.border-emerald-300, .dark\:border-emerald-500\/25, .dark\:border-emerald-500\/35 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+.dark\:border-amber-500\/25, .dark\:border-amber-500\/35, .dark\:border-amber-500\/40 {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+html.dark .dark\:border-white\/5, html.dark .dark\:border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark .dark\:hover\:border-purple-500\/35:hover {
+  border-color: rgba(168, 85, 247, 0.45) !important;
+}
+
+.text-purple-500 { color: #a855f7; }
+.text-purple-700 { color: #6d28d9; }
+.text-pink-600 { color: #db2777; }
+.text-pink-700 { color: #be185d; }
+.text-pink-800 { color: #9d174d; }
+.text-slate-200 { color: #e2e8f0; }
+.text-slate-950 { color: #020617; }
+
+html.dark .dark\:text-purple-200 { color: #e9d5ff !important; }
+html.dark .dark\:text-purple-300 { color: #d8b4fe !important; }
+html.dark .dark\:text-pink-200 { color: #fbcfe8 !important; }
+html.dark .dark\:text-pink-300 { color: #f9a8d4 !important; }
+html.dark .dark\:text-pink-400 { color: #f472b6 !important; }
+html.dark .dark\:text-emerald-400\/80 { color: rgba(52, 211, 153, 0.85) !important; }
+html.dark .dark\:text-zinc-800 { color: #27272a !important; }
+html.dark .group:hover .dark\:group-hover\:text-purple-400 { color: #c084fc !important; }
+
+.from-purple-500 { --tw-gradient-from: #a855f7 var(--tw-gradient-from-position); --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.from-purple-600 { --tw-gradient-from: #9333ea var(--tw-gradient-from-position); --tw-gradient-to: rgb(147 51 234 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.from-purple-600\/20 { --tw-gradient-from: rgba(147, 51, 234, 0.2) var(--tw-gradient-from-position); --tw-gradient-to: rgba(147, 51, 234, 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.via-pink-500 { --tw-gradient-to: rgb(236 72 153 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), #ec4899 var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.via-orange-500 { --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), #f97316 var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.to-pink-500 { --tw-gradient-to: #ec4899 var(--tw-gradient-to-position); }
+.to-pink-500\/20 { --tw-gradient-to: rgba(236, 72, 153, 0.2) var(--tw-gradient-to-position); }
+.to-teal-400 { --tw-gradient-to: #2dd4bf var(--tw-gradient-to-position); }
+.to-amber-400 { --tw-gradient-to: #fbbf24 var(--tw-gradient-to-position); }
+
+@media (min-width: 640px) {
+  .sm\:block { display: block; }
+  .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+  .sm\:gap-2\.5 { gap: 0.625rem; }
+  .sm\:p-6 { padding: 1.5rem; }
+  .sm\:self-auto { align-self: auto; }
+  .sm\:self-center { align-self: center; }
+}
+
+@media (min-width: 768px) {
+  .md\:inline { display: inline; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block { display: block; }
+  .lg\:flex-row { flex-direction: row; }
+  .lg\:items-center { align-items: center; }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .xl\:col-span-5 { grid-column: span 5 / span 5; }
+  .xl\:col-span-7 { grid-column: span 7 / span 7; }
+}
+
+/* ==========================================================================
+   6. SHARED TYPOGRAPHY, BUTTONS & SCROLLBAR
+   ========================================================================== */
+h1, h2, h3, .font-bold {
+  font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif !important;
+  letter-spacing: -0.3px;
+}
+
+.from-brand-500.to-brand-600 {
+  background-image: linear-gradient(135deg, #7c3aed, #3b82f6) !important;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.28) !important;
+}
+.from-brand-500.to-brand-600:hover {
+  background-image: linear-gradient(135deg, #8b5cf6, #ec4899) !important;
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.32) !important;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+html.dark ::-webkit-scrollbar-track { background: rgba(6, 6, 15, 0.6); }
+html:not(.dark) ::-webkit-scrollbar-track { background: #e2e8f0; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #ec4899);
+  border-radius: 10px;
+}
+
+#tilki-snow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+}

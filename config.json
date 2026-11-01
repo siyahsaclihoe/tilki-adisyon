@@ -1,0 +1,9 @@
+{
+  "businessName": "TilkiAdisyon",
+  "port": 3001,
+  "domain": "",
+  "protocol": "https",
+  "tunnelMode": "none",
+  "tunnelName": "tilki-adisyon",
+  "autoStartTunnel": false
+}

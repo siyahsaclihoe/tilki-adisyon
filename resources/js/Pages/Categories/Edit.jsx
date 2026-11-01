@@ -1,0 +1,6 @@
+/**
+ * Reconstructed source from TilkiAdisyon production bundle
+ * Original entry: resources/js/Pages/Categories/Edit.jsx
+ * Bundle chunk: assets/Edit-BF56Oy3l.js
+ */
+import{u,j as e,H as m,L as p}from"./app-tgt1EkC5.js";import{A as c}from"./AppLayout-ZHF-BB9p.js";import{I as n,B as x}from"./Select-BaLHhRWb.js";import{C as f}from"./Card-J4tzdytf.js";function v({category:a}){const{data:t,setData:s,put:l,processing:i,errors:o}=u({name:a.name||"",sort_order:a.sort_order||0}),d=r=>{r.preventDefault(),l(route("categories.update",a.id))};return e.jsxs(c,{title:"Kategori Düzenle",children:[e.jsx(m,{title:"Kategori Düzenle"}),e.jsx("div",{className:"max-w-2xl mx-auto",children:e.jsx(f,{title:`${a.name} Düzenle`,children:e.jsxs("form",{onSubmit:d,className:"space-y-5",children:[e.jsx(n,{label:"Kategori Adı",value:t.name,onChange:r=>s("name",r.target.value),error:o.name}),e.jsx(n,{label:"Sıra",type:"number",value:t.sort_order,onChange:r=>s("sort_order",r.target.value),error:o.sort_order}),e.jsxs("div",{className:"flex justify-end gap-3 pt-4 border-t border-surface-100 dark:border-surface-800",children:[e.jsx(p,{href:route("categories.index"),className:"btn-ghost",children:"İptal"}),e.jsx(x,{type:"submit",loading:i,children:"Güncelle"})]})]})})})]})}export{v as default};

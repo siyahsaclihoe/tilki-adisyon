@@ -1,0 +1,9 @@
+# =====================================================================
+# TilkiAdisyon — Otomatik Oluşturulan Cloudflare Tunnel Config
+# Domain: https://adisyon.ornekdomain.com -> http://localhost:3001
+# =====================================================================
+tunnel: tilki-adisyon
+ingress:
+  - hostname: adisyon.ornekdomain.com
+    service: http://localhost:3001
+  - service: http_status:404

@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Runtime SQLite WAL/SHM temp files
+data/*.db-shm
+data/*.db-wal
+server/*.sqlite-shm
+server/*.sqlite-wal
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.log
+.env
